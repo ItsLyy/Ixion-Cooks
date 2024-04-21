@@ -1,0 +1,51 @@
+@import url(./root.css);
+
+#about{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about__container{
+    display: flex;
+    justify-content: center;
+
+    width: 57%;
+}
+
+#about .about__container .about__banner{
+    width: 30rem;
+    height: 14rem;
+
+    box-shadow: 0 0 5px black;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#about .about__container .about__banner img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    filter: blur(.5px);
+
+    transition: ease-in-out 300ms;
+}
+
+#about .about__container .about__banner:hover img{
+    transform: scale(1.2);
+    filter: blur(0);
+}
+
+#about .about__container #about__content{
+    height: 100%;
+    width: 100%;
+    padding: .3rem 0 0 1rem;
+}
+
+#about .about__container .about__title{
+    font-size: 2em;
+    padding: 0 0 .5em;
+}

@@ -1,0 +1,119 @@
+header {
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+}
+
+.navbar-fixed {
+    position: fixed;
+    background-color: rgba(23, 23, 23, 0.479);
+    box-shadow: inset 0 -1px 1px rgb(23, 23, 23);
+    height: 45px;
+}
+
+.skip-content{
+    position: absolute;
+    top: -100%;
+    text-decoration: none;
+    color: var(--fouth);
+    background-color: var(--third);
+    padding: .5rem .25rem .75rem;
+    border-radius: 0 0 10px 10px;
+
+    transition: ease-in-out 200ms;
+}
+
+.skip-content:focus{
+    top: 0;
+}
+
+header.navbar-fixed h2{
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+header.navbar-fixed nav{
+    transform: translateY(-5rem);
+}
+
+header h2{
+    text-align: center;
+    color: var(--fouth);
+    padding: 1rem 0 .2rem;
+    font-size: 2em;
+    transform-origin: top;
+
+    transition: ease-in-out 200ms;
+}
+
+header h2 span{
+    color: var(--third);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-1rem);
+    cursor: pointer;
+    padding: .25rem 0;
+    box-sizing: border-box;
+    position: relative;
+
+    transition: ease-in-out 200ms;
+}
+
+.navbar-menu ul li{
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar-menu a{
+    display: inline-block;
+    position: relative;
+    color: var(--fouth);
+    transition: ease-in-out 200ms;
+    font-size: 1.2em;
+    padding: .5rem 0;
+}
+
+.navbar-menu ul li a:hover {
+    transform: scale(1.1);
+    color: var(--third);
+}
+
+nav .navbar-logo {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: none;
+    margin: .4rem 0 0;
+
+    background-color: transparent;
+    border: none;
+}
+
+header.navbar-fixed .navbar-logo i{
+    color: white;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header.navbar-fixed .navbar-logo:hover i{
+    color: var(--third);
+}
+
+nav .navbar-logo .open-logo,
+nav .navbar-logo .close-logo {
+    color: var(--fourth-color);
+    position: absolute;
+    font-size: 1.4em;
+    bottom: 0;
+    left: 0;
+
+    padding: 1.3rem 0 0;
+
+    transition: 300ms ease-in-out;
+}

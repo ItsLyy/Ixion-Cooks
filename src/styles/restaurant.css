@@ -1,0 +1,139 @@
+#restaurant .restaurant__other-items{
+    z-index: 2;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    opacity: 55%;
+    font-size: 1.3em;
+    padding: .4rem 1rem;
+    cursor: pointer;
+    transition: ease-in-out 400ms;
+}
+
+#restaurant .restaurant__other-items:hover{
+    opacity: 100%;
+}
+
+#restaurant .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 82%;
+    height: 100%;
+    
+    overflow: hidden;
+    scrollbar-width: none;
+    padding: 3rem 0;
+    box-sizing: border-box;
+}
+
+
+
+#restaurant .container .title-section{
+    font-size: 2em;
+    margin: 0 0 2rem;
+    font-weight: 200;
+}
+
+#restaurant .container .box-area .box{
+    height: 24.25rem;
+    min-width: 20rem;
+    max-width: 24rem;
+    flex: 1;
+    box-sizing: border-box;
+    opacity: 85%;
+
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    color: inherit;
+    background-color: inherit;
+
+    margin: .5rem 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid rgba(68, 68, 68, 0.219);
+    border-radius: 6px;
+    position: relative;
+    
+    overflow: hidden;
+    transition: ease-in-out 200ms;
+    cursor: pointer;
+}
+
+#restaurant .container .box-area .box:hover{
+    box-shadow: 0 0 5px black;
+    opacity: 100%;
+    transform: scale(1.01);
+}
+
+#restaurant .container .box-area .box .top-area{
+    height: 300px;
+    width: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+#restaurant .container .box-area .box .top-area img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#restaurant .container .box-area .box .bottom-area{
+    height: 100%;
+    
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    pointer-events: none;
+}
+
+#restaurant .container .box-area .box .bottom-area .title{
+    font-size: 1.5em;
+    margin: 0 .1rem .25rem;
+}
+
+#restaurant .container .box-area .box .bottom-area .detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .2rem;
+    
+
+    font-size: smaller;
+    opacity: 80%;
+}
+
+#restaurant .container .box-area .box .bottom-area .detail p{
+    display: inline-flex;
+    align-items: center;
+    gap: .1rem;
+}
+
+#restaurant .container .box-area .box .bottom-area .detail .rating i{
+    font-size: .9em;
+    padding: 0 0 2px;
+}
+
+
+#restaurant .container .box-area .box .bottom-area .desc{
+    font-size: .9em;
+    padding: 0 .25rem;
+    opacity: 80%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}

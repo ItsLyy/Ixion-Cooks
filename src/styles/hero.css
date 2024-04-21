@@ -1,0 +1,33 @@
+@import url(./root.css);
+
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+    background-color: var(--main);
+}
+
+#hero .hero__container{
+    min-width: 1000px;
+    width: 75rem;
+    height: 90%;
+    box-sizing: border-box;
+
+    background: radial-gradient(rgba(0, 0, 0, 0.719) 1%, rgb(23, 23, 23) 72%), url('../public/images/heros/hero-image_1.jpg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    color: var(--fouth);
+}
+
+#hero .hero__container span{
+    color: var(--third);
+}

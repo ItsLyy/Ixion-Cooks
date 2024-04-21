@@ -1,0 +1,156 @@
+@media (max-width: 1300px) {
+  #restaurant .container .box-area{
+    height: 24rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+
+  #hero .hero__container {
+    min-width: unset;
+    width: 100%;
+  }
+
+  #hero .hero__container .hero__desc {
+    width: 60%;
+    text-align: center;
+  }
+
+  #restaurant .container .box-area{
+    height: 22.5rem;
+  }
+
+}
+
+@media (max-width: 960px) {
+  #about {
+    height: 80vh;
+  }
+
+  #about .about__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .about__container .about__banner {
+    width: 90%;
+  }
+
+  #about .about__container #about__content {
+    padding: 0;
+  }
+
+  #about .about__container .about__title {
+    text-align: center;
+    padding: 1rem 0 0.5rem;
+  }
+
+  #about .about__container .about__desc {
+    text-align: center;
+  }
+
+  #restaurant .container .box-area .box{
+    opacity: 100%;
+  }
+}
+
+
+@media (max-width: 700px) {
+    header nav{
+        justify-content: center;
+    }
+  
+    header.navbar-fixed nav {
+        justify-content: end;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+  
+
+    header.navbar-fixed nav .navbar-menu {
+    width: 20rem;
+    height: 100vh;
+    background-color: var(--main);
+    padding: 0.25rem;
+    position: absolute;
+    top: 110%;
+    right: -100%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+
+    transition: 300ms linear;
+  }
+
+    header.navbar-fixed nav .navbar-menu li {
+    display: block;
+    text-align: left;
+  }
+
+  nav .navbar-menu a{
+    font-size: 1.6em;
+    padding: .45rem 0;
+  }
+
+    header.navbar-fixed nav .navbar-menu a {
+    margin: 0.2rem;
+    font-size: 1.2em;
+    width: 100%;
+    padding: .475rem 0;
+  }
+    header.navbar-fixed nav .navbar-menu a:hover {
+    color: var(--third);
+    transform: scale(1.05);
+  }
+
+    header.navbar-fixed nav .navbar-menu .link-list {
+    margin-top: 3rem;
+  }
+
+  .navbar-logo.active{
+    display: block;
+  }
+
+  .open-logo.active,
+  .close-logo.active {
+    opacity: 100%;
+    transform: scale(1);
+  }
+
+  header.navbar-fixed nav .navbar-menu.active {
+    right: 0;
+  }
+
+  .open-logo.deactive,
+  .close-logo.deactive {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  
+  #restaurant .restaurant__other-items{
+    font-size: 1.5em;
+    padding: .5rem 1rem;
+  }
+
+  #details .details__container .restaurant__information .restaurant__title-area{
+    margin: 0 0 .5rem;
+  }
+  
+  #details .details__container .restaurant__information .restaurant__title-area .restaurant__title{
+    font-size: 2em;
+  }
+
+  #details .details__container{
+    width: 100%;
+  }
+
+  #details .details__container .restaurant__review .review__profile{
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem 0 0;
+  }
+}
