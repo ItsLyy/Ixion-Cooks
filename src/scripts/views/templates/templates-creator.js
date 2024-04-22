@@ -86,7 +86,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
   `;
 
 const createRestaurantItemTemplate = (restaurant) => `
-  <a href="#/details/${restaurant.id}" class="box">
+  <a href="#/details/${restaurant.id}" class="box restaurant">
     <div class="top-area">
       <img
         src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}"
