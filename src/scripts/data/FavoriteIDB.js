@@ -36,10 +36,6 @@ const FavoriteRestaurantDB = {
   async deleteRestaurant(id) {
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
-
-  // eslint-disable-next-line
-  async searchRestaurant(query) {
-  },
 };
 
 export default FavoriteRestaurantDB;
