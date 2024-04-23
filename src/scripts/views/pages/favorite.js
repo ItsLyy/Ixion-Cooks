@@ -1,6 +1,7 @@
 import FavoriteRestaurantDB from '../../data/FavoriteIDB';
-import { createRestaurantItemTemplate } from '../templates/templates-creator';
-import searchRestaurantInitiator from '../../utils/search-restaurant-iniator';
+import RestaurantSearchView from './restaurant/restaurant-search-view';
+import SearchRestaurantPresenter from './restaurant/restaurant-search-presenter';
+import RestaurantShowPresenter from './restaurant/restaurant-show-presenter';
 
 const Favorite = {
   async render() {
@@ -15,7 +16,7 @@ const Favorite = {
       display: flex;
       align-items: center;
       
-      height: fit-content;
+      height: 100vh;
       position: relative;
       flex-direction: column;
     }
@@ -59,17 +60,21 @@ const Favorite = {
   },
 
   async afterRender() {
-    const restaurantsItem = await FavoriteRestaurantDB.getAllRestaurants();
     const restaurantContainer = document.querySelector('.box-area');
-    searchRestaurantInitiator.init({
+
+    // eslint-disable-next-line
+    new SearchRestaurantPresenter({
       input: document.querySelector('#search-restaurant'),
-      restaurants: restaurantsItem,
-      container: restaurantContainer,
-      page: Favorite,
+      restaurants: FavoriteRestaurantDB,
+      restaurantsContainer: restaurantContainer,
+      view: new RestaurantSearchView(),
     });
 
-    restaurantsItem.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    // eslint-disable-next-line
+    new RestaurantShowPresenter({
+      view: new RestaurantSearchView(),
+      restaurants: FavoriteRestaurantDB,
+      restaurantsContainer: restaurantContainer,
     });
   },
 };

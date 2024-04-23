@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 
-import SearchRestaurantPresenter from '../src/scripts/utils/search-restaurant-presenter';
+import SearchRestaurantPresenter from '../src/scripts/views/pages/restaurant/restaurant-search-presenter';
+import RestaurantSearchView from '../src/scripts/views/pages/restaurant/restaurant-search-view';
 
 describe('Searching Restaurant', () => {
   let presenter;
@@ -21,6 +22,7 @@ describe('Searching Restaurant', () => {
       input: document.querySelector('#search-restaurant'),
       restaurants: favoriteRestaurants,
       restaurantsContainer: document.querySelector('.box-area'),
+      view: new RestaurantSearchView(),
     });
   };
 
@@ -106,7 +108,7 @@ describe('Searching Restaurant', () => {
     });
   });
 
-  describe('When no restaurant coulb be found', () => {
+  describe('When no restaurant could be found', () => {
     it('Should show empty message', (done) => {
       document
         .querySelector('.box-area').addEventListener('restaurant:searched:updated', () => {
