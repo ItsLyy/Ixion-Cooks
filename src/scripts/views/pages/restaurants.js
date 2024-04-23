@@ -1,6 +1,7 @@
 import RestaurantDB from '../../data/RestaurantDB';
-import { createRestaurantItemTemplate } from '../templates/templates-creator';
-import searchRestaurantInitiator from '../../utils/search-restaurant-iniator';
+import RestaurantSearchView from './restaurant/restaurant-search-view';
+import SearchRestaurantPresenter from './restaurant/restaurant-search-presenter';
+import RestaurantShowPresenter from './restaurant/restaurant-show-presenter';
 
 const Restaurants = {
   async render() {
@@ -59,17 +60,20 @@ const Restaurants = {
   },
 
   async afterRender() {
-    const restaurantsItem = await RestaurantDB.allData();
     const restaurantContainer = document.querySelector('.box-area');
-    searchRestaurantInitiator.init({
+    // eslint-disable-next-line
+    new SearchRestaurantPresenter({
       input: document.querySelector('#search-restaurant'),
-      restaurants: restaurantsItem,
-      container: restaurantContainer,
-      page: Restaurants,
+      restaurants: RestaurantDB,
+      restaurantsContainer: restaurantContainer,
+      view: new RestaurantSearchView(),
     });
 
-    restaurantsItem.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    // eslint-disable-next-line
+    new RestaurantShowPresenter({
+      view: new RestaurantSearchView(),
+      restaurants: RestaurantDB,
+      restaurantsContainer: restaurantContainer,
     });
   },
 };

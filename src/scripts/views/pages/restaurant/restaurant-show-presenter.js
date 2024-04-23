@@ -3,8 +3,8 @@ class RestaurantShowPresenter {
     this._view = view;
     this._restaurants = restaurants;
     this._restaurantsContainer = restaurantsContainer;
-
     this._view.restaurantsContainer = this._restaurantsContainer;
+
     this._showRestaurants();
   }
 
