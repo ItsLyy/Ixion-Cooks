@@ -1,7 +1,7 @@
 import CONFIG from '../global/config';
 
 class RestaurantDB {
-  static async allData() {
+  static async getAllRestaurants() {
     try {
       const response = await fetch(`${CONFIG.BASE_URL_RESTAURANT_API}/list`);
       const responseJson = await response.json();
@@ -21,6 +21,19 @@ class RestaurantDB {
       console.log(err);
       return err;
     }
+  }
+
+  static async searchRestaurant(query) {
+    return (await this.getAllRestaurants())
+      .filter((restaurant) => {
+        const loweredCaseRestaurantName = restaurant.name.toLowerCase();
+        const jammedRestaurantName = loweredCaseRestaurantName.replace(/\s/g, '');
+
+        const loweredCaseQuery = query.toLowerCase();
+        const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
+
+        return jammedRestaurantName.indexOf(jammedQuery) !== -1;
+      });
   }
 }
 

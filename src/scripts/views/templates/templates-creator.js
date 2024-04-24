@@ -59,7 +59,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <p class="restaurant__location">${restaurant.address}, ${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
       </div>
       <div class="restaurant__title-area">
-        <h2 class="restaurant__title">${restaurant.name} |</h2>
+        <h2 class="restaurant__title">${restaurant.name || '-'} |</h2>
         <p class="restaurant__categories">${createCategoryTemplate(restaurant.categories)}</p>
       </div>
       <p class="restaurant__description">${restaurant.description}</p>
@@ -98,7 +98,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       <p class="rating"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
       <p class="location">${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
     </div>
-    <h2 class="title">${restaurant.name}</h2>
+    <h2 class="title">${restaurant.name || '-'}</h2>
     <p class="desc">${restaurant.description}</p>
   </div>
 </a>
@@ -118,7 +118,7 @@ const createUnlikeRestaurantButtonTemplate = () => `
 
 const createEmptyMessageForSearch = () => `
   <div class="restaurant__not__found">
-    <h2></h2>
+    <h2>There is no restaurant that you like</h2>
   </div>
 `;
 

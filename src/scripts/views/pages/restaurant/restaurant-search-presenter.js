@@ -1,16 +1,20 @@
-import { createEmptyMessageForSearch, createRestaurantItemTemplate } from '../views/templates/templates-creator';
-
 class SearchRestaurantPresenter {
-  constructor({ input, restaurants, restaurantsContainer }) {
+  constructor({
+    input,
+    restaurants,
+    restaurantsContainer,
+    view,
+  }) {
     this._input = input;
     this._restaurants = restaurants;
     this._restaurantsContainer = restaurantsContainer;
+    this._view = view;
     this._listenToSearchRequestByUser();
   }
 
   _listenToSearchRequestByUser() {
-    this._input.addEventListener('change', (event) => {
-      this._searchRestaurant(event.target.value);
+    this._view.runWhenUserIsSearching((latestQuery) => {
+      this._searchRestaurant(latestQuery);
     });
   }
 
@@ -26,14 +30,8 @@ class SearchRestaurantPresenter {
   }
 
   _showRestaurantFound(restaurants) {
-    let html;
-    if (restaurants.length > 0) {
-      html = restaurants.reduce((carry, restaurant) => carry.concat(createRestaurantItemTemplate(restaurant)), '');
-    } else {
-      html = createEmptyMessageForSearch();
-    }
-    this._restaurantsContainer.innerHTML = html;
-    document.querySelector('.box-area').dispatchEvent(new Event('restaurant:searched:updated'));
+    this._view.restaurantsContainer = this._restaurantsContainer;
+    this._view.showRestaurant(restaurants);
   }
 
   get latestQuery() {
