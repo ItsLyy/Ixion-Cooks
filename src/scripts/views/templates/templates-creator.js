@@ -17,7 +17,7 @@ const createReviewTemplate = (customerReviews) => {
   customerReviews.forEach((customerReview) => {
     text += `
       <div class="restaurant__review">
-        <img src="images/profile_icon.png" class="review__profile" alt="profile-icon">
+        <img data-src="images/profile_icon.png" alt="profile-icon" class="review__profil lazyload" images>
         <div>
           <div class="review__detail">
             <p class="review__name">${customerReview.name} |</p>
@@ -51,8 +51,11 @@ const createMenusTemplate = (menus) => {
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="details__container">
-    <img src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
-    alt="${restaurant.name}" class="restaurant__banner">
+    <picture>
+        <source media="(max-width: 600px)" srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
+        <img data-src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
+             alt="${restaurant.name}" class="restaurant__banner lazyload" images>
+    </picture>
     <div class="restaurant__information">
       <div class="restaurant__status">
         <p class="restaurant__rating"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
@@ -88,10 +91,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <a href="#/details/${restaurant.id}" class="box restaurant">
     <div class="top-area">
-      <img
-        src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}"
-        alt="${restaurant.name}"
-      />
+      <picture>
+        <source media="(max-width: 600px)" srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
+        <img data-src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
+             alt="${restaurant.name}" class="lazyload" images>
+      </picture>
     </div>
   <div class="bottom-area">
     <div class="detail">

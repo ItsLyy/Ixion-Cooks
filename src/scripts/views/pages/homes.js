@@ -81,7 +81,7 @@ const Homes = {
       <article id="about">
         <div class="about__container">
           <div class="about__banner">
-            <img src="https://www.fluentu.com/blog/english/wp-content/uploads/sites/4/2018/02/talking-about-food-in-english.jpg" alt="about-banner">
+            <img data-src="https://www.fluentu.com/blog/english/wp-content/uploads/sites/4/2018/02/talking-about-food-in-english.jpg" class="lazyload" alt="about-banner" images>
           </div>
           <div id="about__content">
             <h2 class="about__title" tabindex="0">About This Website</h2>
