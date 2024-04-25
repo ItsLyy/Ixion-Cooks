@@ -3,9 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const ImageminMozjpeg = require('imagemin-mozjpeg');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -75,15 +72,5 @@ module.exports = {
       swDest: 'sw.bundle.js',
     }),
 
-    new ImageminWebpackPlugin({
-      plugins: [
-        ImageminMozjpeg({
-          quality: 20,
-          progressive: true,
-        }),
-      ],
-    }),
-
-    new BundleAnalyzerPlugin(),
   ],
 };

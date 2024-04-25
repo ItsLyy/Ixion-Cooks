@@ -20,7 +20,7 @@
     align-items: center;
     flex-direction: column;
     
-    width: 82%;
+    width: 90%;
     height: 100%;
     
     overflow: hidden;
@@ -63,6 +63,10 @@
     overflow: hidden;
     transition: ease-in-out 200ms;
     cursor: pointer;
+}
+
+#restaurant .container .box-area{
+    width: 70rem;
 }
 
 #restaurant .container .box-area .box:hover{

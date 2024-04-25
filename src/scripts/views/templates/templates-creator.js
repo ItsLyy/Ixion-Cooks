@@ -17,7 +17,7 @@ const createReviewTemplate = (customerReviews) => {
   customerReviews.forEach((customerReview) => {
     text += `
       <div class="restaurant__review">
-        <img data-src="images/profile_icon.png" alt="profile-icon" class="review__profil lazyload" images>
+        <img data-src="images/profile_icon.png" alt="profile-icon" class="review__profile lazyload" images>
         <div>
           <div class="review__detail">
             <p class="review__name">${customerReview.name} |</p>
