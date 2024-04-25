@@ -19,6 +19,15 @@
 
 .skeleton-text {
   display: inline-block;
+  height: max-content;
+  width: 80%;
+  font-size: .8em;
+  background-size: 40%;
+  margin-bottom: .3rem;
+}
+
+.skeleton-text:last-child {
+  width: 70%;
 }
 
 @keyframes skeleton-loading {

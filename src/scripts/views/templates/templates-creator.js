@@ -99,11 +99,11 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
   <div class="bottom-area">
     <div class="detail">
-        <p class="rating skeleton"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
-        <p class="location skeleton">${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
+        <p class="rating skeleton skeleton-text"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
+        <p class="location skeleton skeleton-text">${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
     </div>
-    <h2 class="title skeleton">${restaurant.name || '-'}</h2>
-    <p class="desc skeleton">${restaurant.description}</p>
+    <h2 class="title skeleton skeleton-text">${restaurant.name || '-'}</h2>
+    <p class="desc skeleton skeleton-text">${restaurant.description}</p>
   </div>
 </a>
 `;
