@@ -10,8 +10,6 @@ const swRegister = async () => {
   try {
     // eslint-disable-next-line no-unused-vars
     const registrations = await wb.register();
-
-    console.log('Service worker registered');
   } catch (error) {
     console.log('Failed to register service worker', error);
   }

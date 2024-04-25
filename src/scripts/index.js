@@ -8,7 +8,9 @@ import navbarLogic from './utils/navbar';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
+// eslint-disable-next-line
 const START = 10;
+// eslint-disable-next-line
 const NUMBER_OF_IMAGES = 100;
 
 const app = new App({

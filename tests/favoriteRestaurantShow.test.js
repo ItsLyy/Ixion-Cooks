@@ -40,6 +40,7 @@ describe('Showing all favorite restaurant', () => {
       const presenter = new RestaurantShowPresenter({
         view,
         restaurants: favoriteRestaurants,
+        restaurantsContainer: document.querySelector('.box-area'),
       });
 
       const restaurants = [];
@@ -57,6 +58,7 @@ describe('Showing all favorite restaurant', () => {
       new RestaurantShowPresenter({
         view,
         restaurants: favoriteRestaurants,
+        restaurantsContainer: document.querySelector('.box-area'),
       });
 
       expect(favoriteRestaurants.getAllRestaurants).toHaveBeenCalledTimes(1);
@@ -77,13 +79,13 @@ describe('Showing all favorite restaurant', () => {
             id: 11,
             title: 'A',
             vote_average: 3,
-            overview: 'Sebuah film A',
+            overview: 'Sebuah restaurant A',
           },
           {
             id: 22,
             title: 'B',
             vote_average: 4,
-            overview: 'Sebuah film B',
+            overview: 'Sebuah restaurant B',
           },
         ]),
       };
@@ -92,6 +94,7 @@ describe('Showing all favorite restaurant', () => {
       new RestaurantShowPresenter({
         view,
         restaurants: favoriteRestaurants,
+        restaurantsContainer: document.querySelector('.box-area'),
       });
     });
   });

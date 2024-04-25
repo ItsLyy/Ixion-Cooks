@@ -80,12 +80,16 @@ const Homes = {
       </style>
       <article id="about">
         <div class="about__container">
-          <div class="about__banner">
+          <div class="about__banner skeleton">
             <img data-src="https://www.fluentu.com/blog/english/wp-content/uploads/sites/4/2018/02/talking-about-food-in-english.jpg" class="lazyload" alt="about-banner" images>
           </div>
           <div id="about__content">
-            <h2 class="about__title" tabindex="0">About This Website</h2>
-            <p class="about__desc">This website contain list of the restaurant. Each restaurant have a unique description and have a rating. If you want go to the restaurant that you seem interesting, you can check the location on the description.</p>
+            <div class="skeleton skeleton-text">
+              <h2 class="about__title" tabindex="0">About This Website</h2>
+            </div>
+            <div class="skeleton skeleton-text">
+              <p class="about__desc">This website contain list of the restaurant. Each restaurant have a unique description and have a rating. If you want go to the restaurant that you seem interesting, you can check the location on the description.</p>
+            </div>
           </div>
         </div>
       </article>

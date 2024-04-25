@@ -90,7 +90,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
   <a href="#/details/${restaurant.id}" class="box restaurant">
-    <div class="top-area">
+    <div class="top-area skeleton">
       <picture>
         <source media="(max-width: 600px)" srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
         <img data-src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
@@ -99,11 +99,11 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
   <div class="bottom-area">
     <div class="detail">
-      <p class="rating"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
-      <p class="location">${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
+        <p class="rating skeleton"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
+        <p class="location skeleton">${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
     </div>
-    <h2 class="title">${restaurant.name || '-'}</h2>
-    <p class="desc">${restaurant.description}</p>
+    <h2 class="title skeleton">${restaurant.name || '-'}</h2>
+    <p class="desc skeleton">${restaurant.description}</p>
   </div>
 </a>
 `;

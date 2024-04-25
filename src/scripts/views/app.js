@@ -21,6 +21,11 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const allSkeleton = document.querySelectorAll('.skeleton');
+    allSkeleton.forEach((item) => {
+      item.classList.remove('skeleton');
+    });
   }
 }
 

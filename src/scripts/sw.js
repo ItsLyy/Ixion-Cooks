@@ -23,11 +23,5 @@ registerRoute(therestaurantdbApi);
 registerRoute(therestaurantdbImageApi);
 
 self.addEventListener('install', () => {
-  console.log('Service Worker: Installed');
   self.skipWaiting();
-});
-
-// eslint-disable-next-line no-unused-vars
-self.addEventListener('push', (event) => {
-  console.log('Service Worker: Pushed');
 });

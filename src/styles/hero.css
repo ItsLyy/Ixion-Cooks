@@ -15,7 +15,7 @@
     height: 90%;
     box-sizing: border-box;
 
-    background: radial-gradient(rgba(0, 0, 0, 0.719) 1%, rgb(23, 23, 23) 72%), url('../public/images/heros/hero-image_1.jpg');
+    background: radial-gradient(rgba(0, 0, 0, 0.719) 1%, rgb(23, 23, 23) 72%), url('../public/images/heros/hero-image_1.webp');
     background-repeat: no-repeat;
     object-fit: cover;
     object-position: center;
