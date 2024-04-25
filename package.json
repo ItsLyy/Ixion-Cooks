@@ -10,7 +10,8 @@
     "lint:fix": "eslint ./src --fix",
     "lint": "eslint ./src",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",

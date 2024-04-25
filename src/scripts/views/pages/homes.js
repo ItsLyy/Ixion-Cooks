@@ -102,7 +102,7 @@ const Homes = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantDB.allData();
+    const restaurants = await RestaurantDB.getAllRestaurants();
     const restaurantContainer = document.querySelector('.box-area');
 
     // eslint-disable-next-line no-plusplus
