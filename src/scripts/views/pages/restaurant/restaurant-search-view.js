@@ -20,6 +20,14 @@ class RestaurantSearchView {
       html = createEmptyMessageForSearch();
     }
     this._restaurantsContainer.innerHTML = html;
+    const allSkeleton = document.querySelectorAll('.skeleton');
+    const allSkeletonText = document.querySelectorAll('.skeleton-text');
+    allSkeleton.forEach((item) => {
+      item.classList.remove('skeleton');
+    });
+    allSkeletonText.forEach((item) => {
+      item.classList.remove('skeleton-text');
+    });
     document.querySelector('.box-area').dispatchEvent(new Event('restaurant:searched:updated'));
   }
 }

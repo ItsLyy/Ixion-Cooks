@@ -21,6 +21,7 @@
 
   #restaurant .container .box-area{
     height: 22.5rem;
+    width: unset;
   }
 
 }

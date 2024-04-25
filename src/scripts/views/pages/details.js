@@ -35,6 +35,15 @@ const Detail = {
       },
     });
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+
+    const allSkeleton = document.querySelectorAll('.skeleton');
+    const allSkeletonText = document.querySelectorAll('.skeleton-text');
+    allSkeleton.forEach((item) => {
+      item.classList.remove('skeleton');
+    });
+    allSkeletonText.forEach((item) => {
+      item.classList.remove('skeleton-text');
+    });
   },
 };
 

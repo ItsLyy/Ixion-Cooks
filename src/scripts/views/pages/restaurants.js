@@ -75,6 +75,15 @@ const Restaurants = {
       restaurants: RestaurantDB,
       restaurantsContainer: restaurantContainer,
     });
+
+    const allSkeleton = document.querySelectorAll('.skeleton');
+    const allSkeletonText = document.querySelectorAll('.skeleton-text');
+    allSkeleton.forEach((item) => {
+      item.classList.remove('skeleton');
+    });
+    allSkeletonText.forEach((item) => {
+      item.classList.remove('skeleton-text');
+    });
   },
 };
 

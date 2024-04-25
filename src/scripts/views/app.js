@@ -21,15 +21,6 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
-
-    const allSkeleton = document.querySelectorAll('.skeleton');
-    const allSkeletonText = document.querySelectorAll('.skeleton-text');
-    allSkeleton.forEach((item) => {
-      item.classList.remove('skeleton');
-    });
-    allSkeletonText.forEach((item) => {
-      item.classList.remove('skeleton-text');
-    });
   }
 }
 

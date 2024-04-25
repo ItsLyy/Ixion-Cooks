@@ -1,8 +1,8 @@
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common');
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const ImageminMozjpeg = require('imagemin-mozjpeg');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'production',

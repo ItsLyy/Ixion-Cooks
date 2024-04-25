@@ -81,7 +81,8 @@ const Homes = {
       <article id="about">
         <div class="about__container">
           <div class="about__banner skeleton">
-            <img data-src="https://www.fluentu.com/blog/english/wp-content/uploads/sites/4/2018/02/talking-about-food-in-english.jpg" class="lazyload" alt="about-banner" images>
+          <img data-src="abouts/aboutfood.webp" 
+                alt="foodspanel" class="restaurant__banner lazyload" images>
           </div>
           <div id="about__content">            
             <h2 class="about__title skeleton skeleton-text" tabindex="0">About This Website</h2>
@@ -111,6 +112,14 @@ const Homes = {
         restaurants[i],
       );
     }
+    const allSkeleton = document.querySelectorAll('.skeleton');
+    const allSkeletonText = document.querySelectorAll('.skeleton-text');
+    allSkeleton.forEach((item) => {
+      item.classList.remove('skeleton');
+    });
+    allSkeletonText.forEach((item) => {
+      item.classList.remove('skeleton-text');
+    });
   },
 };
 

@@ -20,10 +20,10 @@ const createReviewTemplate = (customerReviews) => {
         <img data-src="images/profile_icon.png" alt="profile-icon" class="review__profile lazyload" images>
         <div>
           <div class="review__detail">
-            <p class="review__name">${customerReview.name} |</p>
-            <p class="review__date">${customerReview.date}</p>
+            <p class="review__name" skeleton skeleton-text>${customerReview.name} |</p>
+            <p class="review__date" skeleton skeleton-text>${customerReview.date}</p>
           </div>
-          <p class="review__content">${customerReview.review}</p>
+          <p class="review__content skeleton skeleton-text">${customerReview.review}</p>
         </div>
       </div>
     `;
@@ -50,24 +50,24 @@ const createMenusTemplate = (menus) => {
 };
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <div class="details__container">
+  <div class="details__container skeleton">
     <picture>
         <source media="(max-width: 600px)" srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
         <img data-src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
              alt="${restaurant.name}" class="restaurant__banner lazyload" images>
     </picture>
     <div class="restaurant__information">
-      <div class="restaurant__status">
-        <p class="restaurant__rating"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
-        <p class="restaurant__location">${restaurant.address}, ${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
+      <div class="restaurant__status skeleton">
+        <p class="restaurant__rating skeleton-text"><i class="fa-regular fa-star-half-stroke"></i> ${restaurant.rating}</p>
+        <p class="restaurant__location skeleton-text">${restaurant.address}, ${restaurant.city} <i class="fa-solid fa-location-dot"></i></p>
       </div>
-      <div class="restaurant__title-area">
-        <h2 class="restaurant__title">${restaurant.name || '-'} |</h2>
-        <p class="restaurant__categories">${createCategoryTemplate(restaurant.categories)}</p>
+      <div class="restaurant__title-area skeleton">
+        <h2 class="restaurant__title skeleton-text">${restaurant.name || '-'} |</h2>
+        <p class="restaurant__categories skeleton-text">${createCategoryTemplate(restaurant.categories)}</p>
       </div>
-      <p class="restaurant__description">${restaurant.description}</p>
+      <p class="restaurant__description skeleton skeleton-text">${restaurant.description}</p>
       <div class="restaurant__menu">
-        <div class="restaurant__menu__items">
+        <div class="restaurant__menu__items skeleton skeleton-text">
           <h3>Menu Makanan</h3>
           <ul>
             ${createMenusTemplate(restaurant.menus).foods}
