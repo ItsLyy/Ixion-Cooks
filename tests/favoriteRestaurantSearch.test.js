@@ -132,5 +132,5 @@ describe('Searching Restaurant', () => {
 
       searchRestaurants('Mother Father');
     });
-  })
+  });
 });
