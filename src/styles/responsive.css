@@ -9,11 +9,6 @@
     font-size: 90%;
   }
 
-  #hero .hero__container {
-    min-width: unset;
-    width: 100%;
-  }
-
   #hero .hero__container .hero__desc {
     width: 60%;
     text-align: center;
@@ -129,6 +124,12 @@
   .close-logo.deactive {
     opacity: 0;
     transform: scale(0);
+  }
+
+  #hero .hero__container{
+    background: radial-gradient(rgba(0, 0, 0, 0.719) 8%, rgb(23, 23, 23) 45%), url('../public/images/heros/hero-image_1-small.webp');
+    background-repeat: no-repeat;
+    background-position: center; 
   }
 
   
