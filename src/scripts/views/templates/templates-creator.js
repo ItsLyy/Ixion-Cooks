@@ -52,7 +52,7 @@ const createMenusTemplate = (menus) => {
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="details__container skeleton">
     <picture>
-        <source media="(max-width: 600px)" srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
         <img data-src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
              alt="${restaurant.name}" class="restaurant__banner lazyload" images>
     </picture>
@@ -92,7 +92,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   <a href="#/details/${restaurant.id}" class="box restaurant">
     <div class="top-area skeleton">
       <picture>
-        <source media="(max-width: 600px)" srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.IMG_SMALL_RES_URL_RESTAURANT_API}${restaurant.pictureId}">
         <img data-src="${CONFIG.IMG_LARGE_RES_URL_RESTAURANT_API}${restaurant.pictureId}" 
              alt="${restaurant.name}" class="lazyload" images>
       </picture>
