@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { watch } = require('fs');
 
 module.exports = {
   entry: {
@@ -35,6 +37,11 @@ module.exports = {
         },
       },
     },
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
   module: {
     rules: [
@@ -71,6 +78,9 @@ module.exports = {
       swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
       swDest: 'sw.bundle.js',
     }),
-
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: true,
+    }),
   ],
 };

@@ -32,4 +32,5 @@ module.exports = merge(common, {
       ],
     }),
   ],
+  watch: false,
 });
